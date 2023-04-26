@@ -19,13 +19,9 @@
 
 
 int main ( void )
-{   
-
-    
+{ 
     SYS_Initialize ( NULL );
     PWM_override_OFF();
-    
-    
     //EEPROM_BulkErase();
     //fill_empty_EEPROM();
     
@@ -34,7 +30,6 @@ int main ( void )
     Nop();
     Nop();
     Nop();
-    
     MCPWM_Start(); 
     
     while ( 1 )
