@@ -2,7 +2,7 @@
 # Compiler options
 CC = xc32-gcc
 LD = xc32-ld
-CFLAGS = -mprocessor=32MK1024MCF064 -I. -I./drivers -I./middleware -I./software -I./config/V3_MCF1024 -I./config/V3_MCF1024/peripheral/clk -I./config/V3_MCF1024/peripheral/evic -I./config/V3_MCF1024/peripheral/gpio -I./config/V3_MCF1024/peripheral/adchs -I./config/V3_MCF1024/peripheral/cdac -I./config/V3_MCF1024/peripheral/eeprom -I./config/V3_MCF1024/peripheral/mcpwm -I./config/V3_MCF1024/peripheral/spi/spi_master -I./config/V3_MCF1024/peripheral/uart -I./config/V3_MCF1024/stdio 
+CFLAGS = -mprocessor=32MK1024MCF064 -I. -I./drivers -I./middleware -I./software -I./config/V3_MCF1024 -I./config/V3_MCF1024/peripheral/clk -I./config/V3_MCF1024/peripheral/evic -I./config/V3_MCF1024/peripheral/gpio -I./config/V3_MCF1024/peripheral/adchs -I./config/V3_MCF1024/peripheral/cdac -I./config/V3_MCF1024/peripheral/eeprom -I./config/V3_MCF1024/peripheral/mcpwm -I./config/V3_MCF1024/peripheral/spi/spi_master -I./config/V3_MCF1024/peripheral/uart -I./config/V3_MCF1024/stdio -O2 -Wall -g
 LDFLAGS = -T./config/V3_MCF1024/p32MK1024MCM064.ld
 
 # Source files
