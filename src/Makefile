@@ -14,9 +14,10 @@ OBJ = $(SRC:.c=.o)
 # Output file
 TARGET = myprogram.elf
 HEXFILE = myprogram.hex
+BINFILE = myprogram.bin
 
 # Default target
-all: $(TARGET) $(HEXFILE)
+all: $(TARGET) $(HEXFILE) $(BINFILE)
 
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET) $(OBJ)
@@ -24,10 +25,13 @@ $(TARGET): $(OBJ)
 $(HEXFILE): $(TARGET)
 	xc32-objcopy -O ihex $(TARGET) $(HEXFILE)
 
+$(BINFILE): $(HEXFILE)
+	xc32-objcopy -O ihex -I binary $(HEXFILE) $(BINFILE)
+	
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(TARGET) $(HEXFILE)
+	rm -f $(OBJ) $(TARGET) $(HEXFILE) $(BINFILE)
 
 .PHONY: all clean
