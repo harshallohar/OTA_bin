@@ -17,7 +17,7 @@ VOLUME /home/ubuntu/harshal:/
 #ENV PATH="/opt/microchip/xc32/v2.50/bin:${PATH}"
 
 # Install any additional dependencies required by your project
-RUN make -C /var/lib/jenkins/workspace/project123/src/
+RUN make -C /var/lib/jenkins/workspace/project123/src/Makefile
 #RUN objcopy -O ihex myprogram.elf myprogram.hex
 #RUN objcopy -O ihex -I binary myprogram.hex myprogram.bin
 # Expose any necessary ports
