@@ -15,7 +15,7 @@ VOLUME /home/ubuntu/harshal:/
 
 # Add the XC32 compiler to the system's PATH
 #ENV PATH="/opt/microchip/xc32/v2.50/bin:${PATH}"
-
+RUN cd /var/lib/jenkins/workspace/project123/src/
 # Install any additional dependencies required by your project
 RUN make
 #RUN objcopy -O ihex myprogram.elf myprogram.hex
